@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <script src="../Views/js/jquery-3.5.1.min.js"></script>
+    <script src="../Views/js/jquery.hammer-full.min.js"></script>
+    <script src="../Views/assets/jQuery-slideshow-plugin/plugin.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/jQuery-slideshow-plugin/plugin.css">
+    <script src="../Views/js/main.js"></script>
+    <title>Мероприятия</title>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <nav>
+                <ul>
+                    <li id="nav"><a href="../Views/main.html">Главная</a></li>
+                    <div class="dropdown" id="dropdown">
+                        <li><a href="" id="dropd" class="dropdown-link">О нас</a></li>
+                        <ul class="dropdown-menu" id="myDropdown">
+                            <li>
+                                <a class="dropdown-submenu" href="../Views/restaurants.html">Рестораны</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-submenu" href="../Views/service.html">Обслуживание</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-submenu" href="../Views/contact.html">Контакты</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-submenu" href="../Views/awards.html">Награды</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-submenu" href="../Views/staff.html">Персонал</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-submenu" href="../Views/reviews.html">Отзывы</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <li id="nav"><a href="../Views/menu.html">Меню</a></li>
+                    <li id="nav"><a href="../Views/table.html">Столик</a></li>
+                    <li id="nav"><a href="../Views/event.html">Мероприятие</a></li>
+                    <li id="nav"><a href="../Views/map.html">Схема проезда</a></li>
+                    <li id="nav"><a href="../Views/sitemap.html">Карта сайта</a></li>
+                </ul>
+            </nav>
+        </div>			
+	</header>
+    <section class="page-head" data-overlay>
+        <div class="container">
+            <div class="row text-center text-title">
+                <h2>Заказ мероприятия</h2>
+            </div>
+        </div>
+    </section>
+    <section id="form-event">
+        <div class="container">
+            <form action="/" method="POST" class="form-table">
+                <h3>Заполните форму</h3>
+                <div class="row-form">
+                    <div class="col-md-12">
+                        <select class="input-select" name="restaurant" id="restaurant">
+                            <option disabled selected>Выберите ресторан</option>
+                            <option value="Мрия">Мрия г. Москва, ул. Дурова, д.14</option>
+                            <option value="Бонжур">Бонжур г. Москва, ул. Орджоникидзе, д.1</option>
+                            <option value="Пиколлино">Пиколлино г. Москва, Москва-Сити</option>
+                            <option value="Алькабарено">Алькабарено г. Москва, ул. Тимура Фрунзе, д.22с4</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <input required placeholder="ФИО" type="text" class="input-text" name="fio" value size="0">
+                    </div>
+                    <div class="col-md-6">
+                        <input required placeholder="Телефон" type="text" class="input-text" name="phone" value size="0">
+                    </div>
+                    <div class="col-md-6">
+                        <input required placeholder="Количество гостей" type="text" class="input-text" name="guests" id="guests" value size="0" onblur="costCalculation()">
+                    </div>
+                    <div class="col-md-6">
+                        <input required placeholder="Желаемая дата" type="date" class="input-text" name="date" value size="0">
+                    </div>
+                    <div class="col-md-12">
+                        <textarea required placeholder="Подробное описание мероприятия и пожелания" name="description" cols="40" rows="5" class="input-textarea"></textarea>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <p class="label-cost">Стоимость мероприятия:</p>
+                    </div>
+                    <div class="col-md-6">
+                        <input class="input-text" name="cost-event" id="cost" type="text" disabled value="0">
+                    </div>
+                    <div class="col-md-12 in-row">
+                        <h4>Список блюд</h4>
+                        <a class="button button-show-list" id="show-product" onclick="showList()">Добавить блюдо</a>
+                        <div class="hide-list-products" id="hide-list">
+                            <div class="col-md-12 in-row">
+                                <div class="one-item min-product-img">
+                                    <img src="files/first1.jpg" alt="">
+                                </div>
+                                <div class="one-item product-description">
+                                    <p id="title">Суп-пюре из зелённого гороха с мятой, шпинатом и домашней рикоттой</p>
+                                </div>
+                                <div class="one-item text-center product-cost-min">
+                                    <p id="cost-product-hide">650</p>
+                                </div>
+                                <div class="one-item text-center product-remove-btn">
+                                    <a class="button-add" onclick="addProduct.call(this)"><i class="fa fa-plus"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-md-12 in-row">
+                                <div class="one-item min-product-img">
+                                    <img src="files/second2.jpg" alt="">
+                                </div>
+                                <div class="one-item product-description">
+                                    <p id="title">Вителло тоннато</p>
+                                </div>
+                                <div class="one-item text-center product-cost-min">
+                                    <p id="cost-product-hide">1200</p>
+                                </div>
+                                <div class="one-item text-center product-remove-btn">
+                                    <a class="button-add" onclick="addProduct.call(this)"><i class="fa fa-plus"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-md-12 in-row">
+                                <div class="one-item min-product-img">
+                                    <img src="files/first1.jpg" alt="">
+                                </div>
+                                <div class="one-item product-description">
+                                    <p id="title">Суп-пюре из зелённого гороха с мятой, шпинатом и домашней рикоттой</p>
+                                </div>
+                                <div class="one-item text-center product-cost-min">
+                                    <p id="cost-product-hide">650</p>
+                                </div>
+                                <div class="one-item text-center product-remove-btn">
+                                    <a class="button-add" onclick="addProduct.call(this)"><i class="fa fa-plus"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-md-12 in-row">
+                                <div class="one-item min-product-img">
+                                    <img src="files/second2.jpg" alt="">
+                                </div>
+                                <div class="one-item product-description">
+                                    <p id="title">Вителло тоннато</p>
+                                </div>
+                                <div class="one-item text-center product-cost-min">
+                                    <p id="cost-product-hide">1200</p>
+                                </div>
+                                <div class="one-item text-center product-remove-btn">
+                                    <a class="button-add" onclick="addProduct.call(this)"><i class="fa fa-plus"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-md-12 in-row">
+                                <div class="one-item min-product-img">
+                                    <img src="files/first1.jpg" alt="">
+                                </div>
+                                <div class="one-item product-description">
+                                    <p id="title">Суп-пюре из зелённого гороха с мятой, шпинатом и домашней рикоттой</p>
+                                </div>
+                                <div class="one-item text-center product-cost-min">
+                                    <p id="cost-product-hide">650</p>
+                                </div>
+                                <div class="one-item text-center product-remove-btn">
+                                    <a class="button-add" onclick="addProduct.call(this)"><i class="fa fa-plus"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-md-12 in-row">
+                                <div class="one-item min-product-img">
+                                    <img src="files/second2.jpg" alt="">
+                                </div>
+                                <div class="one-item product-description">
+                                    <p id="title">Вителло тоннато</p>
+                                </div>
+                                <div class="one-item text-center product-cost-min">
+                                    <p id="cost-product-hide">1200</p>
+                                </div>
+                                <div class="one-item text-center product-remove-btn">
+                                    <a class="button-add" onclick="addProduct.call(this)"><i class="fa fa-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="product-list"></div>
+                    <div class="col-12 text-center terms-container">
+                        <input id="terms" type="checkbox" required>
+                        <label for="terms"> Я согласен с условиями <a class="terms" href="https://www.law.ru/article/23093-politika-konfidentsialnosti-dlya-sayta">политики конфиденциальности</a></label>
+                    </div>
+                    <div class="col-12 text-center">
+                        <button class="button" type="submit" name="submit">Отправить</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="footer">
+            <div class="footer-links">
+                <h3>О нас:</h3>
+                <ul>
+                    <li>
+                        <a href="../Views/restaurants.html">Рестораны</a>
+                    </li>
+                    <li>
+                        <a href="../Views/service.html">Обслуживание</a>
+                    </li>
+                    <li>
+                        <a href="../Views/contact.html">Контакты</a>
+                    </li>
+                    <li>
+                        <a href="../Views/awards.html">Награды</a>
+                    </li>
+                    <li>
+                        <a href="../Views/staff.html">Персонал</a>
+                    </li>
+                    <li>
+                        <a href="../Views/reviews.html">Отзывы</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-socials">
+                <div class="social twitter">
+                    <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
+                </div>
+                <div class="social github">
+                    <a href="https://github.com/" target="_blank"><i class="fa fa-github fa-2x"></i></a>
+                </div>
+                <div class="social instagram">
+                    <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram fa-2x"></i></a>
+                </div>
+                <div class="social facebook">
+                    <a href="https://ru-ru.facebook.com/" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>    
+                </div>
+                <div class="social vk">
+                    <a href="https://vk.com/" target="_blank"><i class="fa fa-vk fa-2x"></i></a>    
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

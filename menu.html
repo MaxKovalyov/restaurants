@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <script src="../Views/js/jquery-3.5.1.min.js"></script>
+    <script src="../Views/js/jquery.hammer-full.min.js"></script>
+    <script src="../Views/assets/jQuery-slideshow-plugin/plugin.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/jQuery-slideshow-plugin/plugin.css">
+    <script src="../Views/js/main.js"></script>
+    <title>Меню</title>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <nav>
+                <ul>
+                    <li id="nav"><a href="../Views/main.html">Главная</a></li>
+                    <div class="dropdown" id="dropdown">
+                        <li><a href="" id="dropd" class="dropdown-link">О нас</a></li>
+                        <ul class="dropdown-menu" id="myDropdown">
+                            <li>
+                                <a class="dropdown-submenu" href="../Views/restaurants.html">Рестораны</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-submenu" href="../Views/service.html">Обслуживание</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-submenu" href="../Views/contact.html">Контакты</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-submenu" href="../Views/awards.html">Награды</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-submenu" href="../Views/staff.html">Персонал</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-submenu" href="../Views/reviews.html">Отзывы</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <li id="nav"><a href="../Views/menu.html">Меню</a></li>
+                    <li id="nav"><a href="../Views/table.html">Столик</a></li>
+                    <li id="nav"><a href="../Views/event.html">Мероприятие</a></li>
+                    <li id="nav"><a href="../Views/map.html">Схема проезда</a></li>
+                    <li id="nav"><a href="../Views/sitemap.html">Карта сайта</a></li>
+                </ul>
+            </nav>
+        </div>			
+	</header>
+    <section class="page-head" data-overlay>
+        <div class="container">
+            <div class="row text-center text-title">
+                <h2>Меню</h2>
+            </div>
+        </div>
+    </section>
+    <section id="slideshow-min">
+        <div class="container">
+            <div class="row text-center">
+                <h2>Галерея</h2>
+            </div>
+            <div class="slideshow-container-min">
+                <img src="files/first4.jpg" data-slideshow="files/first1.jpg|files/first2.jpg|files/first3.jpg">
+                <img src="files/second4.jpg" data-slideshow="files/second1.jpg|files/second2.jpg|files/second3.jpg">
+                <img src="files/snack4.jpg" data-slideshow="files/snack1.jpg|files/snack2.jpg|files/snack3.jpg">
+                <img src="files/drink4.jpg" data-slideshow="files/drink1.jpg|files/drink2.jpg|files/drink3.jpg">
+                <img src="files/dessert4.jpg" data-slideshow="files/dessert1.jpg|files/dessert2.jpg|files/dessert3.jpg">
+            </div>
+        </div>
+    </section>
+    <section id="menu">
+        <div class="container">
+            <div class="row text-center">
+                <h2>Первое блюдо</h2>
+            </div>
+            <div class="products-grid">
+                <div class="product">
+                    <div class="product-img">
+                        <img src="files/first1.jpg" alt="">
+                    </div>
+                    <div class="product-title">
+                        <span class="title">Суп-пюре из зелённого гороха с мятой, шпинатом и домашней рикоттой</span>
+                    </div>
+                    <div class="product-cost">
+                        <span class="cost">650 ₽</span>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-img">
+                        <img src="files/first2.jpg" alt="">
+                    </div>
+                    <div class="product-title">
+                        <span class="title">Вителло тоннато</span>
+                    </div>
+                    <div class="product-cost">
+                        <span class="cost">1200 ₽</span>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-img">
+                        <img src="files/first3.jpg" alt="">
+                    </div>
+                    <div class="product-title">
+                        <span class="title">Минестроне с фрегола сарда</span>
+                    </div>
+                    <div class="product-cost">
+                        <span class="cost">650 ₽</span>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-img">
+                        <img src="files/first4.jpg" alt="">
+                    </div>
+                    <div class="product-title">
+                        <span class="title">Сицилийский рыбный суп</span>
+                    </div>
+                    <div class="product-cost">
+                        <span class="cost">2000 ₽</span>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-img">
+                        <img src="files/first2.jpg" alt="">
+                    </div>
+                    <div class="product-title">
+                        <span>Вителло тоннато</span>
+                    </div>
+                    <div class="product-cost">
+                        <span>1200 ₽</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row text-center">
+                <h2>Второе блюдо</h2>
+            </div>
+            <div class="products-grid">
+                <div class="product">
+                    <div class="product-img">
+                        <img src="files/second1.jpg" alt="">
+                    </div>
+                    <div class="product-title">
+                        <span class="title">Суп-пюре из зелённого гороха с мятой, шпинатом и домашней рикоттой</span>
+                    </div>
+                    <div class="product-cost">
+                        <span class="cost">650 ₽</span>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-img">
+                        <img src="files/second2.jpg" alt="">
+                    </div>
+                    <div class="product-title">
+                        <span class="title">Вителло тоннато</span>
+                    </div>
+                    <div class="product-cost">
+                        <span class="cost">1200 ₽</span>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-img">
+                        <img src="files/second3.jpg" alt="">
+                    </div>
+                    <div class="product-title">
+                        <span class="title">Минестроне с фрегола сарда</span>
+                    </div>
+                    <div class="product-cost">
+                        <span class="cost">650 ₽</span>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-img">
+                        <img src="files/second4.jpg" alt="">
+                    </div>
+                    <div class="product-title">
+                        <span class="title">Сицилийский рыбный суп</span>
+                    </div>
+                    <div class="product-cost">
+                        <span class="cost">2000 ₽</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row text-center">
+                <h2>Напитки</h2>
+            </div>
+            <div class="products-grid">
+                <div class="product">
+                    <div class="product-img">
+                        <img src="files/drink1.jpg" alt="">
+                    </div>
+                    <div class="product-title">
+                        <span class="title">Суп-пюре из зелённого гороха с мятой, шпинатом и домашней рикоттой</span>
+                    </div>
+                    <div class="product-cost">
+                        <span class="cost">650 ₽</span>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-img">
+                        <img src="files/drink2.jpg" alt="">
+                    </div>
+                    <div class="product-title">
+                        <span class="title">Вителло тоннато</span>
+                    </div>
+                    <div class="product-cost">
+                        <span class="cost">1200 ₽</span>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-img">
+                        <img src="files/drink3.jpg" alt="">
+                    </div>
+                    <div class="product-title">
+                        <span class="title">Минестроне с фрегола сарда</span>
+                    </div>
+                    <div class="product-cost">
+                        <span class="cost">650 ₽</span>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-img">
+                        <img src="files/drink4.jpg" alt="">
+                    </div>
+                    <div class="product-title">
+                        <span class="title">Сицилийский рыбный суп</span>
+                    </div>
+                    <div class="product-cost">
+                        <span class="cost">2000 ₽</span>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-img">
+                        <img src="files/drink1.jpg" alt="">
+                    </div>
+                    <div class="product-title">
+                        <span class="title">Суп-пюре из зелённого гороха с мятой, шпинатом и домашней рикоттой</span>
+                    </div>
+                    <div class="product-cost">
+                        <span class="cost">650 ₽</span>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-img">
+                        <img src="files/drink2.jpg" alt="">
+                    </div>
+                    <div class="product-title">
+                        <span class="title">Вителло тоннато</span>
+                    </div>
+                    <div class="product-cost">
+                        <span class="cost">1200 ₽</span>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-img">
+                        <img src="files/drink3.jpg" alt="">
+                    </div>
+                    <div class="product-title">
+                        <span class="title">Минестроне с фрегола сарда</span>
+                    </div>
+                    <div class="product-cost">
+                        <span class="cost">650 ₽</span>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-img">
+                        <img src="files/drink4.jpg" alt="">
+                    </div>
+                    <div class="product-title">
+                        <span class="title">Сицилийский рыбный суп</span>
+                    </div>
+                    <div class="product-cost">
+                        <span class="cost">2000 ₽</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row text-center">
+                <h2>Закуски</h2>
+            </div>
+            <div class="products-grid">
+                <div class="product">
+                    <div class="product-img">
+                        <img src="files/snack1.jpg" alt="">
+                    </div>
+                    <div class="product-title">
+                        <span class="title">Суп-пюре из зелённого гороха с мятой, шпинатом и домашней рикоттой</span>
+                    </div>
+                    <div class="product-cost">
+                        <span class="cost">650 ₽</span>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-img">
+                        <img src="files/snack2.jpg" alt="">
+                    </div>
+                    <div class="product-title">
+                        <span class="title">Вителло тоннато</span>
+                    </div>
+                    <div class="product-cost">
+                        <span class="cost">1200 ₽</span>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-img">
+                        <img src="files/snack3.jpg" alt="">
+                    </div>
+                    <div class="product-title">
+                        <span class="title">Минестроне с фрегола сарда</span>
+                    </div>
+                    <div class="product-cost">
+                        <span class="cost">650 ₽</span>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-img">
+                        <img src="files/snack4.jpg" alt="">
+                    </div>
+                    <div class="product-title">
+                        <span class="title">Сицилийский рыбный суп</span>
+                    </div>
+                    <div class="product-cost">
+                        <span class="cost">2000 ₽</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row text-center">
+                <h2>Десерты</h2>
+            </div>
+            <div class="products-grid">
+                <div class="product">
+                    <div class="product-img">
+                        <img src="files/dessert1.jpg" alt="">
+                    </div>
+                    <div class="product-title">
+                        <span class="title">Суп-пюре из зелённого гороха с мятой, шпинатом и домашней рикоттой</span>
+                    </div>
+                    <div class="product-cost">
+                        <span class="cost">650 ₽</span>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-img">
+                        <img src="files/dessert2.jpg" alt="">
+                    </div>
+                    <div class="product-title">
+                        <span class="title">Вителло тоннато</span>
+                    </div>
+                    <div class="product-cost">
+                        <span class="cost">1200 ₽</span>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-img">
+                        <img src="files/dessert3.jpg" alt="">
+                    </div>
+                    <div class="product-title">
+                        <span class="title">Минестроне с фрегола сарда</span>
+                    </div>
+                    <div class="product-cost">
+                        <span class="cost">650 ₽</span>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-img">
+                        <img src="files/dessert4.jpg" alt="">
+                    </div>
+                    <div class="product-title">
+                        <span class="title">Сицилийский рыбный суп</span>
+                    </div>
+                    <div class="product-cost">
+                        <span class="cost">2000 ₽</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer">
+            <div class="footer-links">
+                <h3>О нас:</h3>
+                <ul>
+                    <li>
+                        <a href="../Views/restaurants.html">Рестораны</a>
+                    </li>
+                    <li>
+                        <a href="../Views/service.html">Обслуживание</a>
+                    </li>
+                    <li>
+                        <a href="../Views/contact.html">Контакты</a>
+                    </li>
+                    <li>
+                        <a href="../Views/awards.html">Награды</a>
+                    </li>
+                    <li>
+                        <a href="../Views/staff.html">Персонал</a>
+                    </li>
+                    <li>
+                        <a href="../Views/reviews.html">Отзывы</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-socials">
+                <div class="social twitter">
+                    <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
+                </div>
+                <div class="social github">
+                    <a href="https://github.com/" target="_blank"><i class="fa fa-github fa-2x"></i></a>
+                </div>
+                <div class="social instagram">
+                    <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram fa-2x"></i></a>
+                </div>
+                <div class="social facebook">
+                    <a href="https://ru-ru.facebook.com/" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>    
+                </div>
+                <div class="social vk">
+                    <a href="https://vk.com/" target="_blank"><i class="fa fa-vk fa-2x"></i></a>    
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
