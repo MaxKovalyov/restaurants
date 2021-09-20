@@ -111,6 +111,11 @@ thead {
 td,th {
     border: 1px solid #ffffff85;
     text-align: center;
+    padding: 10px;
+}
+
+th {
+    font-size: 20px;
 }
 
 td a {
@@ -124,4 +129,31 @@ td a {
 
 td a:hover {
     background: #eee;
+}
+
+td img {
+    height: 100px;
+    width: 100px;
+}
+
+.text-center a {
+    padding: 0 5px;
+    font-size: 20px;
+}
+
+.text-center {
+    margin: 0 auto;
+    text-align: center;
+    float: none;
+    width: 100%;
+    display: block;
+}
+
+.active {
+    cursor: not-allowed;
+    text-decoration: none;
+}
+
+.hide {
+    display: none;
 }

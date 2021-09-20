@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/admin.css">
+    <script type="text/javascript" src="../Views/js/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="../Views/libs/ckeditor/ckeditor.js"> </script> 
+    <script type="text/javascript" src="../Views/js/admin.js"></script>
+    <title>Редактирование ресторанов</title>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <nav>
+                <ul>
+                    <li><a href="../Views/admin_news.html">Новости</a></li>
+                    <li><a href="../Views/admin_category.html">Категории</a></li>
+                    <li><a href="../Views/admin_menu.html">Меню</a></li>
+                    <li><a href="../Views/admin_restaurants.html">Рестораны</a></li>
+                    <li><a href="../Views/admin_reviews.html">Отзывы</a></li>
+                    <li><a href="../Views/admin_tableOrders.html">Столики</a></li>
+                    <li><a href="../Views/admin_eventOrders.html">Мероприятия</a></li>
+                </ul>
+            </nav>
+        </div>			
+	</header>
+    <section class="edit-container">
+        <div class="title">
+            <h1>Администрирование ресторанов</h1>
+        </div>
+        <div class="container">
+            <form action="" method="POST" id="form" enctype="multipart/form-data">
+                <div class="row">
+                    <h3>Добавление/редактирование ресторана</h3>
+                </div>
+                <div class="row">
+                    <div class="col-2">
+                        <label for="name">Название ресторана</label>
+                    </div>
+                    <div class="col-6">
+                        <input required id="name" type="text" name="name">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-2">
+                        <label for="img">Фотография ресторана</label>
+                    </div>
+                    <div class="col-6">
+                        <input required id="img" type="file" name="img" accept="image/*">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-2">
+                        <label for="address">Адрес расположения</label>
+                    </div>
+                    <div class="col-6">
+                        <input required id="address" type="text" name="address"> 
+                    </div>
+                </div>
+                <div class="row">
+                    <button type="submit" class="">Отправить</button>
+                </div>
+            </form>
+        </div>
+        <div class="container">
+            <div class="row">
+                <h3>Список ресторанов</h3>
+            </div>
+            <div class="row">
+                <table class="list">
+                    <thead>
+                        <tr>
+                            <th>Картинка</th>
+                            <th>Название</th>
+                            <th>Адрес</th>
+                            <th>Редактировать</th>
+                            <th>Удалить</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="img"><img src="../Views/files/img2.jpg" alt=""></td>
+                            <td id="name">Ресторан "Мрия"</td>
+                            <td id="address">г. Москва, ул. Дурова, д.14</td>
+                            <td><a onclick="editRestaurant.call(this)">Изменить</a></td>
+                            <td><a onclick="removeRestaurant.call(this)">Удалить</a></td>
+                        </tr>
+                        <tr>
+                            <td id="img"><img src="../Views/files/img6.jpg" alt=""></td>
+                            <td id="name">Ресторан "Бонжур"</td>
+                            <td id="address">г. Москва, ул. Орджоникидзе, д.1</td>
+                            <td><a onclick="editRestaurant.call(this)">Изменить</a></td>
+                            <td><a onclick="removeRestaurant.call(this)">Удалить</a></td>
+                        </tr>
+                        <tr>
+                            <td id="img"><img src="../Views/files/img1.jpg" alt=""></td>
+                            <td id="name">Ресторан "Алькабарено"</td>
+                            <td id="address">г. Москва, ул. Тимура Фрунзе, д.22с4</td>
+                            <td><a onclick="editRestaurant.call(this)">Изменить</a></td>
+                            <td><a onclick="removeRestaurant.call(this)">Удалить</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="row text-center">
+                <a class="active">1</a>
+                <a href="">2</a>
+                <a href="">3</a>
+                <a href="">4</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

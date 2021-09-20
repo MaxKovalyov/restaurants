@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/admin.css">
+    <script type="text/javascript" src="../Views/js/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="../Views/libs/ckeditor/ckeditor.js"> </script> 
+    <script type="text/javascript" src="../Views/js/admin.js"></script>
+    <title>Редактирование отзывов</title>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <nav>
+                <ul>
+                    <li><a href="../Views/admin_news.html">Новости</a></li>
+                    <li><a href="../Views/admin_category.html">Категории</a></li>
+                    <li><a href="../Views/admin_menu.html">Меню</a></li>
+                    <li><a href="../Views/admin_restaurants.html">Рестораны</a></li>
+                    <li><a href="../Views/admin_reviews.html">Отзывы</a></li>
+                    <li><a href="../Views/admin_tableOrders.html">Столики</a></li>
+                    <li><a href="../Views/admin_eventOrders.html">Мероприятия</a></li>
+                </ul>
+            </nav>
+        </div>			
+	</header>
+    <section class="edit-container">
+        <div class="title">
+            <h1>Администрирование отзывов</h1>
+        </div>
+        <div class="container">
+            <div class="row">
+                <h3>Список отзывов</h3>
+            </div>
+            <div class="row">
+                <table class="list">
+                    <thead>
+                        <tr>
+                            <th>Имя создателя</th>
+                            <th>Дата добавления</th>
+                            <th>Тело отзыва</th>
+                            <th>Удалить</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="creatorName">Виктор Сергеевич</td>
+                            <td id="date">2021-09-20 22:10</td>
+                            <td id="content">Мой отзыв Мой отзыв Мой отзыв Мой отзыв Мой отзыв Мой отзыв Мой отзыв Мой отзыв Мой отзыв Мой отзыв Мой отзыв Мой отзыв Мой отзыв</td>
+                            <td><a onclick="removeReview.call(this)">Удалить</a></td>
+                        </tr>
+                        <tr>
+                            <td id="creatorName">Виктор Сергеевич</td>
+                            <td id="date">2021-09-20 22:10</td>
+                            <td id="content">Мой отзыв Мой отзыв Мой отзыв Мой отзыв Мой отзыв Мой отзыв Мой отзыв Мой отзыв Мой отзыв Мой отзыв Мой отзыв Мой отзыв Мой отзыв</td>
+                            <td><a onclick="removeReview.call(this)">Удалить</a></td>
+                        </tr>
+                        <tr>
+                            <td id="creatorName">Виктор Сергеевич</td>
+                            <td id="date">2021-09-20 22:10</td>
+                            <td id="content">Мой отзыв Мой отзыв Мой отзыв Мой отзыв Мой отзыв Мой отзыв Мой отзыв Мой отзыв Мой отзыв Мой отзыв Мой отзыв Мой отзыв Мой отзыв</td>
+                            <td><a onclick="removeReview.call(this)">Удалить</a></td>
+                        </tr>
+                        <tr>
+                            <td id="creatorName">Виктор Сергеевич</td>
+                            <td id="date">2021-09-20 22:10</td>
+                            <td id="content">Мой отзыв Мой отзыв Мой отзыв Мой отзыв Мой отзыв Мой отзыв Мой отзыв Мой отзыв Мой отзыв Мой отзыв Мой отзыв Мой отзыв Мой отзыв</td>
+                            <td><a onclick="removeReview.call(this)">Удалить</a></td>
+                        </tr>
+                        <tr>
+                            <td id="creatorName">Виктор Сергеевич</td>
+                            <td id="date">2021-09-20 22:10</td>
+                            <td id="content">Мой отзыв Мой отзыв Мой отзыв Мой отзыв Мой отзыв Мой отзыв Мой отзыв Мой отзыв Мой отзыв Мой отзыв Мой отзыв Мой отзыв Мой отзыв</td>
+                            <td><a onclick="removeReview.call(this)">Удалить</a></td>
+                        </tr>
+                        <tr>
+                            <td id="creatorName">Виктор Сергеевич</td>
+                            <td id="date">2021-09-20 22:10</td>
+                            <td id="content">Мой отзыв Мой отзыв Мой отзыв Мой отзыв Мой отзыв Мой отзыв Мой отзыв Мой отзыв Мой отзыв Мой отзыв Мой отзыв Мой отзыв Мой отзыв</td>
+                            <td><a onclick="removeReview.call(this)">Удалить</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="row text-center">
+                <a class="active">1</a>
+                <a href="">2</a>
+                <a href="">3</a>
+                <a href="">4</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
