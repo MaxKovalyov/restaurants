@@ -94,7 +94,6 @@ function removeProduct() {
 }
 
 function costCalculation() {
-    console.log("Вызван пересчёт");
     let numberGuests = $("#guests").val();
     if(numberGuests == 0 || numberGuests == null) {
         numberGuests = 1;
@@ -105,9 +104,6 @@ function costCalculation() {
     });
 
     let costEvent = costProducts * numberGuests;
-    console.log(numberGuests);
-    console.log(costProducts);
-    console.log(costEvent);
     $("#cost").val(costEvent);
 }
     

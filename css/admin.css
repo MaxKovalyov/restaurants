@@ -118,7 +118,7 @@ th {
     font-size: 20px;
 }
 
-td a {
+td a, .button {
     text-decoration: none;
     padding: 10px;
     color: #000;
@@ -127,13 +127,13 @@ td a {
     cursor: pointer;
 }
 
-td a:hover {
+td a:hover, .button:hover {
     background: #eee;
 }
 
 td img {
-    height: 100px;
-    width: 100px;
+    height: 50px;
+    width: 50px;
 }
 
 .text-center a {
@@ -155,5 +155,17 @@ td img {
 }
 
 .hide {
+    display: none;
+}
+
+.hide-list {
+    position: absolute;
+    background: #000000;
+    z-index: 5;
+    width: 480px;
+    max-height: 155px;
+    right: 16.8%;
+    overflow: auto;
+    color: #fff;
     display: none;
 }
